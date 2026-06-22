@@ -1,0 +1,16 @@
+{
+  "siteId": "pangyo",
+  "siteName": "Pangyo Urban Support Only",
+  "businessFloorWeighted": 152.5441804938952,
+  "workersFloorWeighted": 1792.2171489382567,
+  "businessAreaWeighted": 45.19233932096136,
+  "workersAreaWeighted": 423.5817687557087,
+  "businessDifference": 107.35184117293383,
+  "workersDifference": 1368.635380182548,
+  "businessRatioToAreaMethod": 3.375443333670079,
+  "workersRatioToAreaMethod": 4.231100772356134,
+  "boundaryAreaSqm": 432906.97619628906,
+  "businessDensityFloorWeightedPerSqKm": 352.3717308374548,
+  "workersDensityFloorWeightedPerSqKm": 4139.959038510916,
+  "intersectedEmploymentOaCount": 4
+}

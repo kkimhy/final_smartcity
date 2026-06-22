@@ -1,0 +1,75 @@
+{
+  "siteId": "pangyo",
+  "siteName": "Pangyo Urban Support Only",
+  "buildingCount": 87,
+  "grossAreaSumSqm": 2632234.939999999,
+  "averageGrossAreaSqm": 30255.574022988494,
+  "primaryUseDistribution": [
+    {
+      "key": "업무시설",
+      "count": 53
+    },
+    {
+      "key": "교육연구시설",
+      "count": 21
+    },
+    {
+      "key": "공동주택",
+      "count": 10
+    },
+    {
+      "key": "자동차관련시설",
+      "count": 2
+    },
+    {
+      "key": "제2종근린생활시설",
+      "count": 1
+    }
+  ],
+  "approvalYearDistribution": [
+    {
+      "key": 2011,
+      "count": 22
+    },
+    {
+      "key": 2013,
+      "count": 16
+    },
+    {
+      "key": 2020,
+      "count": 12
+    },
+    {
+      "key": 2012,
+      "count": 10
+    },
+    {
+      "key": 2014,
+      "count": 10
+    },
+    {
+      "key": 2009,
+      "count": 9
+    },
+    {
+      "key": 2010,
+      "count": 4
+    },
+    {
+      "key": 2016,
+      "count": 2
+    },
+    {
+      "key": 2015,
+      "count": 1
+    },
+    {
+      "key": "UNKNOWN",
+      "count": 1
+    }
+  ],
+  "totalBuildingLedgerRows": 13334,
+  "parcelMatchedRows": 13055,
+  "insideBoundaryRows": 87,
+  "parcelMatchRate": 0.9790760461976901
+}

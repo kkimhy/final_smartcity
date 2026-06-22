@@ -1,0 +1,8 @@
+siteId,siteName,zoneName,approximateAreaSqm,approximateShare,totalStudyAreaSqm,method,exactness
+pangyo,판교 도시지원시설용지,준주거지역,425202.359,0.981444,433241.417,included_first_then_equal_split,approximate
+pangyo,판교 도시지원시설용지,자연녹지지역,7234.048,0.016697,433241.417,included_first_then_equal_split,approximate
+pangyo,판교 도시지원시설용지,보전녹지지역,805.01,0.001858,433241.417,included_first_then_equal_split,approximate
+okjeong,양주 옥정 자족용지,준주거지역,214417.123,0.958121,223789.218,included_first_then_equal_split,approximate
+okjeong,양주 옥정 자족용지,자연녹지지역,9370.847,0.041874,223789.218,included_first_then_equal_split,approximate
+okjeong,양주 옥정 자족용지,제3종일반주거지역,0.47,0.000002,223789.218,included_first_then_equal_split,approximate
+okjeong,양주 옥정 자족용지,보전관리지역,0.004,0,223789.218,included_first_then_equal_split,approximate

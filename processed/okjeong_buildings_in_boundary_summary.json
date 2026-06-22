@@ -1,0 +1,43 @@
+{
+  "siteId": "okjeong",
+  "siteName": "Okjeong Urban Support Only",
+  "buildingCount": 10,
+  "grossAreaSumSqm": 473043.1797999999,
+  "averageGrossAreaSqm": 47304.31797999999,
+  "primaryUseDistribution": [
+    {
+      "key": "공장",
+      "count": 6
+    },
+    {
+      "key": "창고시설",
+      "count": 3
+    },
+    {
+      "key": "자동차관련시설",
+      "count": 1
+    }
+  ],
+  "approvalYearDistribution": [
+    {
+      "key": 2024,
+      "count": 5
+    },
+    {
+      "key": 2026,
+      "count": 3
+    },
+    {
+      "key": 2015,
+      "count": 1
+    },
+    {
+      "key": 2022,
+      "count": 1
+    }
+  ],
+  "totalBuildingLedgerRows": 40406,
+  "parcelMatchedRows": 37621,
+  "insideBoundaryRows": 10,
+  "parcelMatchRate": 0.9310745928822453
+}

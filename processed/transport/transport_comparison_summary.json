@@ -1,0 +1,108 @@
+{
+  "analysisDate": "2026-06-22",
+  "stationCatchmentMeters": 500,
+  "sourceCoverage": "서울특별시 + 인천광역시 + 경기도 집계구 전체",
+  "sites": [
+    {
+      "analysisDate": "2026-06-22",
+      "siteId": "pangyo",
+      "siteName": "판교",
+      "sourceCoverage": "서울특별시 + 인천광역시 + 경기도 집계구 전체",
+      "coreStation": {
+        "stationName": "판교역",
+        "stationNodeRule": "동일 역명 전체 사용",
+        "justification": "판교 제1·2·3테크노밸리와 가장 직접적으로 연결되는 대표 철도 결절점으로 보고, 신분당선·경강선 판교역 노드를 함께 출발점으로 사용한다.",
+        "originNodeCount": 2,
+        "originLines": [
+          "경강선",
+          "신분당선"
+        ]
+      },
+      "isochrones": [
+        {
+          "thresholdMinutes": 30,
+          "reachableStationCount": 102,
+          "isochroneAreaSqm": 59291159.210506864,
+          "reachablePopulation": 515322,
+          "reachableWorkers": 85037,
+          "reachableBusiness": 0
+        },
+        {
+          "thresholdMinutes": 60,
+          "reachableStationCount": 458,
+          "isochroneAreaSqm": 253988728.69467783,
+          "reachablePopulation": 2680668,
+          "reachableWorkers": 310143,
+          "reachableBusiness": 0
+        }
+      ],
+      "cumulativeCurveMinuteRange": [
+        0,
+        60
+      ],
+      "stationCatchmentMeters": 500,
+      "stationAreaRatios": [
+        {
+          "bufferMeters": 500,
+          "coveredAreaSqm": 0,
+          "areaRatio": 0
+        },
+        {
+          "bufferMeters": 1000,
+          "coveredAreaSqm": 173653.59005740337,
+          "areaRatio": 0.40101170411332665
+        }
+      ]
+    },
+    {
+      "analysisDate": "2026-06-22",
+      "siteId": "okjeong",
+      "siteName": "옥정",
+      "sourceCoverage": "서울특별시 + 인천광역시 + 경기도 집계구 전체",
+      "coreStation": {
+        "stationName": "덕정역",
+        "stationNodeRule": "동일 역명 전체 사용",
+        "justification": "사용자 정의를 그대로 반영했다. 옥정 업무지구 중심부에서 가장 가까운 지하철역이라는 판단에 따라 대표 핵심역을 덕정역으로 설정한다.",
+        "originNodeCount": 1,
+        "originLines": [
+          "서울1호선"
+        ]
+      },
+      "isochrones": [
+        {
+          "thresholdMinutes": 30,
+          "reachableStationCount": 26,
+          "isochroneAreaSqm": 17315575.348571643,
+          "reachablePopulation": 123395,
+          "reachableWorkers": 8995,
+          "reachableBusiness": 0
+        },
+        {
+          "thresholdMinutes": 60,
+          "reachableStationCount": 107,
+          "isochroneAreaSqm": 65933662.41265158,
+          "reachablePopulation": 716182,
+          "reachableWorkers": 43975,
+          "reachableBusiness": 0
+        }
+      ],
+      "cumulativeCurveMinuteRange": [
+        0,
+        60
+      ],
+      "stationCatchmentMeters": 500,
+      "stationAreaRatios": [
+        {
+          "bufferMeters": 500,
+          "coveredAreaSqm": 0,
+          "areaRatio": 0
+        },
+        {
+          "bufferMeters": 1000,
+          "coveredAreaSqm": 0,
+          "areaRatio": 0
+        }
+      ]
+    }
+  ]
+}

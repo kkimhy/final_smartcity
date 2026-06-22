@@ -1,0 +1,16 @@
+{
+  "siteId": "okjeong",
+  "siteName": "Okjeong Urban Support Only",
+  "businessFloorWeighted": 7.444449507418934,
+  "workersFloorWeighted": 46.5598892894342,
+  "businessAreaWeighted": 1.3445185904507095,
+  "workersAreaWeighted": 11.39353022488993,
+  "businessDifference": 6.0999309169682245,
+  "workersDifference": 35.166359064544274,
+  "businessRatioToAreaMethod": 5.536888489525017,
+  "workersRatioToAreaMethod": 4.08652001358815,
+  "boundaryAreaSqm": 223617.17431640625,
+  "businessDensityFloorWeightedPerSqKm": 33.29104542250158,
+  "workersDensityFloorWeightedPerSqKm": 208.21249276477516,
+  "intersectedEmploymentOaCount": 2
+}

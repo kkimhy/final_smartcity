@@ -1,0 +1,109 @@
+{
+  "generatedAt": "2026-06-21T14:00:40.826Z",
+  "lumMethod": {
+    "basis": "건축물대장 주용도코드명",
+    "weight": "연면적(㎡) 비중과 건축물 수 비중을 모두 계산",
+    "formula": "H = -Σ(p_i ln p_i), normalized = H / ln(K_global)",
+    "globalCategoryCount": 7,
+    "globalCategories": [
+      "공동주택",
+      "공장",
+      "교육연구시설",
+      "업무시설",
+      "자동차관련시설",
+      "제2종근린생활시설",
+      "창고시설"
+    ]
+  },
+  "zoningComposition": {
+    "status": "unavailable",
+    "reason": [
+      "필드에 용도지역명 또는 용도지역코드가 없다.",
+      "표본값이 '건축허가 제한지역' 계열이며 법정 용도지역 객체가 아니다.",
+      "요구 대상 용도지역 5종이 속성값에서 확인되지 않는다."
+    ],
+    "sourcePath": "전국_건축용도지역CH_D024_00_20260618/CH_D024_00_20260618.shp"
+  },
+  "sites": [
+    {
+      "siteId": "pangyo",
+      "siteName": "판교 도시지원시설용지",
+      "boundaryAreaSqm": 433241.416,
+      "parcelCountInBoundary": 91,
+      "builtParcelCount": 53,
+      "unbuiltParcelCount": 38,
+      "unbuiltParcelRatioCount": 0.4175824175824176,
+      "unbuiltParcelAreaSqm": 62790.578,
+      "totalParcelAreaSqm": 384127.041,
+      "unbuiltParcelRatioArea": 0.16346305070458747,
+      "buildingCount": 87,
+      "totalGrossFloorAreaSqm": 2632234.94,
+      "totalFloorAreaForFarSqm": 1481386.13,
+      "siteLevelFarPercent": 385.65,
+      "meanParcelFarPercentBuiltOnly": 567.808,
+      "meanParcelFarPercentAllParcels": 330.701,
+      "lumEntropyFloorArea": 0.676718,
+      "lumEntropyFloorAreaNormalized": 0.347764,
+      "lumEntropyBuildingCount": 1.031742,
+      "lumEntropyBuildingCountNormalized": 0.53021,
+      "lumCategoryCountGlobal": 7,
+      "lumObservedCategoryCount": 5,
+      "totalBuildingLedgerRows": 13334,
+      "parcelMatchedRows": 13055,
+      "insideBoundaryRows": 87,
+      "parcelMatchRate": 0.9790760461976901,
+      "validation": {
+        "expectedBuildingCount": 87,
+        "recalculatedBuildingCount": 87,
+        "buildingCountMatches": true,
+        "expectedGrossAreaSumSqm": 2632234.939999999,
+        "recalculatedGrossAreaSumSqm": 2632234.94,
+        "grossAreaDifferenceSqm": 0,
+        "parcelMatchedRowsExpected": 13055,
+        "parcelMatchedRowsRecalculated": 13055,
+        "insideBoundaryRowsExpected": 87,
+        "insideBoundaryRowsRecalculated": 87
+      }
+    },
+    {
+      "siteId": "okjeong",
+      "siteName": "양주 옥정 자족용지",
+      "boundaryAreaSqm": 223789.424,
+      "parcelCountInBoundary": 30,
+      "builtParcelCount": 8,
+      "unbuiltParcelCount": 22,
+      "unbuiltParcelRatioCount": 0.7333333333333333,
+      "unbuiltParcelAreaSqm": 109807.562,
+      "totalParcelAreaSqm": 223705.15,
+      "unbuiltParcelRatioArea": 0.49085844422621616,
+      "buildingCount": 10,
+      "totalGrossFloorAreaSqm": 473043.18,
+      "totalFloorAreaForFarSqm": 249879.679,
+      "siteLevelFarPercent": 111.7,
+      "meanParcelFarPercentBuiltOnly": 223.357,
+      "meanParcelFarPercentAllParcels": 59.562,
+      "lumEntropyFloorArea": 0.663084,
+      "lumEntropyFloorAreaNormalized": 0.340758,
+      "lumEntropyBuildingCount": 0.897946,
+      "lumEntropyBuildingCountNormalized": 0.461453,
+      "lumCategoryCountGlobal": 7,
+      "lumObservedCategoryCount": 3,
+      "totalBuildingLedgerRows": 40406,
+      "parcelMatchedRows": 37621,
+      "insideBoundaryRows": 10,
+      "parcelMatchRate": 0.9310745928822453,
+      "validation": {
+        "expectedBuildingCount": 10,
+        "recalculatedBuildingCount": 10,
+        "buildingCountMatches": true,
+        "expectedGrossAreaSumSqm": 473043.1797999999,
+        "recalculatedGrossAreaSumSqm": 473043.1798,
+        "grossAreaDifferenceSqm": 0,
+        "parcelMatchedRowsExpected": 37621,
+        "parcelMatchedRowsRecalculated": 37621,
+        "insideBoundaryRowsExpected": 10,
+        "insideBoundaryRowsRecalculated": 10
+      }
+    }
+  ]
+}

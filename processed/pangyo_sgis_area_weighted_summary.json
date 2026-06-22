@@ -1,0 +1,18 @@
+{
+  "siteId": "pangyo",
+  "siteName": "Pangyo Urban Support Only",
+  "boundaryAreaSqm": 432906.97619628906,
+  "totalPopulation": 71.56416553386326,
+  "totalBusiness": 45.19233932096136,
+  "totalWorkers": 423.5817687557087,
+  "populationDensityPerSqKm": 165.31072370941553,
+  "businessDensityPerSqKm": 104.3927259339665,
+  "workersDensityPerSqKm": 978.4590964033065,
+  "intersectedOaCount": 4,
+  "missingBusinessCells": 0,
+  "missingWorkersCells": 0,
+  "sourceMissingCounts": {
+    "businessNaRows": 4491,
+    "workersNaRows": 3334
+  }
+}

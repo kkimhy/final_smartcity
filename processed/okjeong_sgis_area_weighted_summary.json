@@ -1,0 +1,18 @@
+{
+  "siteId": "okjeong",
+  "siteName": "Okjeong Urban Support Only",
+  "boundaryAreaSqm": 223617.17431640625,
+  "totalPopulation": 134.0501141413083,
+  "totalBusiness": 1.3445185904507095,
+  "totalWorkers": 11.39353022488993,
+  "populationDensityPerSqKm": 599.4625169157832,
+  "businessDensityPerSqKm": 6.012590913738532,
+  "workersDensityPerSqKm": 50.951051768361495,
+  "intersectedOaCount": 3,
+  "missingBusinessCells": 1,
+  "missingWorkersCells": 0,
+  "sourceMissingCounts": {
+    "businessNaRows": 2990,
+    "workersNaRows": 2190
+  }
+}
