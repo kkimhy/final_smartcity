@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "build:dashboard": "node scripts/build_dashboard_data.js",
+    "build:transport": "node scripts/build_transport_docs_data.js",
+    "build:map-layer": "node scripts/build_map_layer_data.js",
+    "analyze:sgis": "node scripts/analyze_sgis_area_weighted.js",
+    "analyze:transport": "node scripts/analyze_transport_accessibility.js"
+  },
+  "dependencies": {
+    "@turf/turf": "^7.2.0",
+    "csv-parse": "^7.0.0",
+    "iconv-lite": "^0.7.2",
+    "proj4": "^2.20.9",
+    "shapefile": "^0.6.6"
+  }
+}
