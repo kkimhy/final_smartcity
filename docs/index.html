@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>판교 · 옥정 도시지원시설용지 비교</title>
+    <link rel="preconnect" href="https://unpkg.com">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    >
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Pangyo vs Okjeong</p>
+          <h1>판교와 옥정 도시지원시설용지 비교</h1>
+          <p class="lead">
+            두 연구지를 같은 기준으로 나란히 비교할 수 있도록 핵심 지표와 토지이용 관련 시각화를 한 화면에 정리했습니다.
+            경계 확인부터 개발 현황과 용도 구성까지 이어서 읽을 수 있게 구성했습니다.
+          </p>
+        </div>
+        <div class="hero-note">
+          <strong>표시 내용</strong>
+          <ul>
+            <li>도시지원시설용지 분석 경계</li>
+            <li>건축물 수, 연면적, 개발 현황 요약</li>
+            <li>토지이용 관련 비교 지표와 보조 분석 결과</li>
+          </ul>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="section">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Map Compare</p>
+              <h2>입지 및 경계 비교</h2>
+            </div>
+            <p class="section-desc">
+              두 대상지의 분석 경계를 같은 화면 구성으로 비교할 수 있도록 Leaflet 지도를 배치했습니다.
+            </p>
+          </div>
+
+          <div class="map-compare-toolbar">
+            <div class="segmented-control" id="map-layout-toggle">
+              <button type="button" class="segmented-control__button is-active" data-layout="split">나란히 보기</button>
+              <button type="button" class="segmented-control__button" data-layout="single">단일 보기</button>
+            </div>
+            <div class="segmented-control" id="map-site-toggle">
+              <button type="button" class="segmented-control__button is-active" data-site="pangyo">판교</button>
+              <button type="button" class="segmented-control__button" data-site="okjeong">옥정</button>
+            </div>
+          </div>
+
+          <div class="map-grid" id="primary-map-grid">
+            <article class="panel site-panel" id="pangyo-map-panel">
+              <div class="panel-top">
+                <div>
+                  <p class="site-tag">Pangyo</p>
+                  <h3>판교 도시지원시설용지</h3>
+                </div>
+                <span class="badge">Leaflet</span>
+              </div>
+              <div id="pangyo-map" class="map"></div>
+              <div class="site-meta" id="pangyo-map-meta"></div>
+            </article>
+
+            <article class="panel site-panel" id="okjeong-map-panel">
+              <div class="panel-top">
+                <div>
+                  <p class="site-tag">Okjeong</p>
+                  <h3>옥정 도시지원시설용지</h3>
+                </div>
+                <span class="badge">Leaflet</span>
+              </div>
+              <div id="okjeong-map" class="map"></div>
+              <div class="site-meta" id="okjeong-map-meta"></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Quick Compare</p>
+              <h2>핵심 지표 비교</h2>
+            </div>
+            <p class="section-desc">
+              현재 산출된 건축물대장, SGIS, 필지 교차 결과를 압축한 비교 요약입니다.
+            </p>
+          </div>
+          <div id="comparison-cards" class="card-grid"></div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Statistics Panel</p>
+              <h2>영역별 비교 패널</h2>
+            </div>
+            <p class="section-desc">
+              3-1 교통, 3-2 토지이용, 3-3 인구·고용 지표를 한 화면에서 비교할 수 있도록 표와 차트를 묶었습니다.
+            </p>
+          </div>
+          <div id="stats-panel-grid" class="stats-panel-grid"></div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Transport Analysis</p>
+              <h2>교통망 분석</h2>
+            </div>
+            <p class="section-desc">
+              업무지구 중심부를 대표하는 핵심역을 출발점으로 두고, 지하철 기준 30분·60분 등시간권과 그 안에서 닿는 인구·종사자 규모를 비교합니다.
+            </p>
+          </div>
+          <div id="transport-core-stations" class="analysis-grid"></div>
+          <div id="transport-isochrone-grid" class="map-grid"></div>
+          <div id="transport-summary-grid" class="card-grid"></div>
+          <div id="transport-curve-panel" class="panel transport-curve-panel"></div>
+          <div id="transport-station-area-grid" class="analysis-grid"></div>
+          <div id="transport-method-note" class="section-note"></div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Land Use Analysis</p>
+              <h2>토지이용 분석</h2>
+            </div>
+            <p class="section-desc">
+              건축물대장, 개발 현황, 연면적 기준 혼합도, 용도지역 근사 추정 결과를 한 섹션에서 비교합니다.
+            </p>
+          </div>
+
+          <div class="analysis-stack">
+            <section class="analysis-subsection">
+              <div class="section-head">
+                <div>
+                  <p class="section-kicker">Building Use</p>
+                  <h3>건축물 주용도 구성비</h3>
+                </div>
+                <p class="section-desc">
+                  연면적 비율 기준으로 판교와 옥정의 주용도 구성을 나란히 비교합니다.
+                </p>
+              </div>
+              <div id="building-use-composition" class="use-composition-section"></div>
+            </section>
+
+            <section class="analysis-subsection">
+              <div class="section-head">
+                <div>
+                  <p class="section-kicker">Development Realization</p>
+                  <h3>개발 실현 정도</h3>
+                </div>
+                <p class="section-desc">
+                  연구 경계 안에서 실제로 개발된 면적 비율과 남아 있는 미개발 면적 비중을 함께 봅니다.
+                </p>
+              </div>
+              <div id="development-realization" class="analysis-grid"></div>
+            </section>
+
+            <section class="analysis-subsection">
+              <div class="section-head">
+                <div>
+                  <p class="section-kicker">Land Use Mix</p>
+                  <h3>토지이용 혼합도</h3>
+                </div>
+                <p class="section-desc">
+                  연면적 기준 정규화 엔트로피를 사용해 용도 구성이 얼마나 섞여 있는지 비교합니다.
+                </p>
+              </div>
+              <div id="land-use-mix" class="analysis-grid"></div>
+            </section>
+
+            <section class="analysis-subsection">
+              <div class="section-head">
+                <div>
+                  <p class="section-kicker">Zoning Approximation</p>
+                  <h3>용도지역 구성비 추정</h3>
+                </div>
+                <p class="section-desc">
+                  법정 확정 면적이 아니라 VWorld 토지이용계획정보를 이용한 보조 분석 결과입니다.
+                </p>
+              </div>
+              <div class="caution-note">정확한 용도지역 면적값이 아닌 보조 분석입니다.</div>
+              <div id="zoning-grid" class="map-grid"></div>
+              <div class="section-note">
+                <p class="section-desc">
+                  본 결과는 VWorld 토지이용계획정보의 필지별 용도지역 목록을 활용한 근사 추정 결과입니다.
+                  정확한 용도지역 경계 폴리곤을 사용한 면적 산출 결과가 아니므로 연구지의 용도지역 경향을
+                  파악하기 위한 참고자료로만 사용합니다.
+                </p>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Socioeconomic Analysis</p>
+              <h2>인구사회 분석</h2>
+            </div>
+            <p class="section-desc">
+              SGIS 집계구 통계와 전국사업체조사를 면적 비례 배분해 연구구역 내부 인구, 사업체, 종사자, 직주비와 업종 구성을 비교합니다.
+            </p>
+          </div>
+          <div id="socio-overview-cards" class="card-grid"></div>
+          <div id="socio-metric-grid" class="analysis-grid"></div>
+          <div id="socio-industry-grid" class="analysis-grid"></div>
+          <div id="socio-interpretation-grid" class="analysis-grid"></div>
+          <div id="socio-method-note" class="section-note"></div>
+        </section>
+
+        <footer class="footer">
+          <p>
+            데이터 소스: <code>docs/data/dashboard-data.js</code>
+          </p>
+        </footer>
+      </main>
+    </div>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="./data/dashboard-data.js"></script>
+    <script src="./data/transport-data.js"></script>
+    <script src="./data/building-use-composition.js"></script>
+    <script src="./data/map-layer-data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
